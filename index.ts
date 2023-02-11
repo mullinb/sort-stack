@@ -15,12 +15,12 @@ class Stack {
     this.head.next = temp;
   }
   pop() {
-    const temp = this.head;
-    if (!temp) {
+    if (!this.head) {
       throw new Error("Stack empty");
     }
+    const temp = this.head;
     this.head = this.head.next;
-    return temp?.data;
+    return temp.data;
   }
   peek() {
     return this.head?.data ?? null;
